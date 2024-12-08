@@ -1,0 +1,151 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F2EBE3;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.card-image {
+    flex: 50%;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card-content {
+    flex: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.category {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #5a5a5a;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-desc {
+    color: #5a5a5a;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.pricing {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.sale-price {
+    font-size: 22px;
+    color: #3C8067;
+    font-weight: bold;
+}
+
+.list-price {
+    font-size: 16px;
+    color: #B3B3B3;
+    text-decoration: line-through;
+}
+
+.add-to-cart-btn {
+    background-color: #3C8067;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: rgb(60, 128, 103);
+}
+
+.attribution {
+    text-align: center;
+    color: #5a5a5a;
+    font-size: 12px;
+    margin-top: 50px;
+    
+}
+
+.attribution a {
+    color: #3C8067;
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+
+.forMobile{
+    display: none;
+}
+
+.forDesktop{
+    display: block;
+}
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .forMobile{
+        display: block;
+    }
+    
+    .forDesktop{
+        display: none;
+    }
+
+    .card-content {
+        padding: 15px;
+    }
+}
